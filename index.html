@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCodeThis - Challenge: Playlist</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex min-h-screen items-end justify-center bg-gradient-to-bl from-purple-800 to-blue-400">
+    <div class="absolute inset-0 z-0 bg-center [mask-image:linear-gradient(white,rgba(255,255,255,10))] animate-pulse">
+        <svg class="stroke-white/10" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="smallGrid" width="8" height="8" patternUnits="userSpaceOnUse">
+                    <path d="M 8 0 L 0 0 0 8" fill="none" stroke="gray" stroke-width="0.5" />
+                </pattern>
+                <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+                    <rect width="80" height="80" fill="url(#smallGrid)" />
+                    <path d="M 80 0 L 0 0 0 80" fill="none" stroke="gray" stroke-width="0.5" />
+                </pattern>
+            </defs>
+
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+    </div>
+    <main class="w-full max-w-md bg-white rounded-t-xl p-5 z-10">
+        <h1 class="text-2xl font-extralight mb-2">Mix - Best of Trip-Hop & Downtempo & Lofi & Hip-Hop</h1>
+
+        <div class="flex justify-between mb-4">
+            <p class="text-blue-500">33 videos</p>
+            <button class="hover:bg-blue-400 hover:text-white hover:drop-shadow-lg rounded-md inline-flex align-middle" onclick="myFunction()">
+            <svg xmlns="http://www.w3.org/2000/svg" id="myButton" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M6 9l6 6l6 -6"></path>
+            </svg>
+          </button>
+        </div>
+
+        <hr class="mb-4">
+
+        <div id="playlist-content" class="flex flex-col opacity-100">
+            <div
+                class="flex gap-3 hover:bg-gradient-to-r hover:from-blue-400 transition duration-100 hover:to-blue-500 group hover:scale-110 p-3 -mx-4 hover:rounded-xl cursor-pointer">
+                <div class="relative w-1/3 rounded-lg overflow-hidden">
+                    <img class="object-cover h-full w-full block" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=4096&q=80" alt="Mountain at night, with stars in the sky">
+                    <p class="absolute bottom-1 left-1 text-xs bg-white rounded-md px-1 font-bold">1:15:55</p>
+                </div>
+                <div class="w-2/3">
+                    <h2 class="font-bold text-sm group-hover:text-white">Interstellar: A Trip Hop Mix</h2>
+                    <p class="text-blue-500 group-hover:text-white text-xs font-bold">Confused Bi-Product of a
+                        Misinformed Culture</p>
+                </div>
+            </div>
+
+            <div
+                class="flex gap-3 hover:bg-gradient-to-r hover:from-blue-400 transition duration-100 hover:to-blue-500 group hover:scale-110 p-3 -mx-4 hover:rounded-xl cursor-pointer">
+                <div class="relative w-1/3 rounded-lg overflow-hidden">
+                    <img class="object-cover h-full w-full block" src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=5000&q=80" alt="Brush and paint">
+                    <p class="absolute bottom-1 left-1 text-xs bg-white rounded-md px-1 font-bold">2:02:50</p>
+                </div>
+                <div class="w-2/3">
+                    <h2 class="font-bold text-sm group-hover:text-white">Best of Trip-Hop & Downtempo & Lofi & Hip-Hop
+                        instrumental Vol. 3
+                        Re-Upload</h2>
+                    <p class="text-blue-500 group-hover:text-white text-xs font-bold">S!X - Music</p>
+                </div>
+            </div>
+
+            <div
+                class="flex gap-3 hover:bg-gradient-to-r hover:from-blue-400 transition duration-100 hover:to-blue-500 group hover:scale-110 p-3 -mx-4 hover:rounded-xl cursor-pointer">
+                <div class="relative w-1/3 rounded-lg overflow-hidden">
+                    <img class="object-cover h-full w-full block" src="https://images.unsplash.com/photo-1580882872259-728a7a86c719?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3600&q=80" alt="Dreamy background">
+                    <p class="absolute bottom-1 left-1 text-xs bg-white rounded-md px-1 font-bold">1:00:07</p>
+                </div>
+                <div class="w-2/3">
+                    <h2 class="font-bold text-sm group-hover:text-white">Inspiring mix | lofi hip hop | Chillhop,
+                        Jazzhop, Chillout
+                        [Study/Sleep/Game]</h2>
+                    <p class="text-blue-500 group-hover:text-white text-xs font-bold">Dreamy</p>
+                </div>
+            </div>
+
+            <div
+                class="flex gap-3 hover:bg-gradient-to-r hover:from-blue-400 transition duration-100 hover:to-blue-500 group hover:scale-110 p-3 -mx-4 hover:rounded-xl cursor-pointer">
+                <div class="relative w-1/3 rounded-lg overflow-hidden">
+                    <img class="object-cover h-full w-full block" src="https://images.unsplash.com/photo-1601643157091-ce5c665179ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=5072&q=80" alt="Hip hop">
+                    <p class="absolute bottom-1 left-1 text-xs bg-white rounded-md px-1 font-bold">2:02:52</p>
+                </div>
+                <div class="w-2/3">
+                    <h2 class="font-bold text-sm group-hover:text-white">Chill Study Beats 4 • jazz & lofi hiphop Mix
+                        [2017]</h2>
+                    <p class="text-blue-500 group-hover:text-white text-xs font-bold">Chillhop Music</p>
+                </div>
+            </div>
+
+            <div
+                class="flex gap-3 hover:bg-gradient-to-r hover:from-blue-400 transition duration-100 hover:to-blue-500 group hover:scale-110 p-3 -mx-4 hover:rounded-xl cursor-pointer">
+                <div class="relative w-1/3 rounded-lg overflow-hidden">
+                    <img class="object-cover h-full w-full block" src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=4368&q=80" alt="Jazz concert">
+                    <p class="absolute bottom-1 left-1 text-xs bg-white rounded-md px-1 font-bold">2:02:50</p>
+                </div>
+                <div class="w-2/3">
+                    <h2 class="font-bold text-sm group-hover:text-white">Hip Hop ‘ Funk ‘ Jazz - Ours Samplus</h2>
+                    <p class="text-blue-500 group-hover:text-white text-xs font-bold">Stay See</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
